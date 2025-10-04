@@ -39,3 +39,19 @@ kubectl get deployments -n apps
 ```
  brew install derailed/k9s/k9s
 ```
+
+# Docker - Generar imagen de contenedor
+```
+docker build -t clasesurp2/backend-python:v1.0.0 .
+
+docker build -t clasesurp2/frontend-python:v1.0.0 .
+```
+
+# Docker Registry - Autenticar a registry
+docker login -u clasesurp2
+
+# Docker - Tag de imagen existente
+docker tag backend-python:v1.0.0 clasesurp2/backend-python:v1.0.0
+
+# Docker - Subir imagen a registry
+docker push clasesurp2/backend-python:v1.0.0
