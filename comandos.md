@@ -27,6 +27,10 @@ kubectl get pod -n apps
 ```
 kubectl get deployments -n apps
 ```
+# instalar aplicacion en kubernetes
+```
+kubectl apply -f deploy/apps/deployment.yaml
+```
 
 # instalar k9s
 ```
@@ -42,16 +46,17 @@ kubectl get deployments -n apps
 
 # Docker - Generar imagen de contenedor
 ```
-docker build -t clasesurp2/backend-python:v1.0.0 .
+docker build -t myusuariodockerhub/backend-python:v1.0.0 .
 
-docker build -t clasesurp2/frontend-python:v1.0.0 .
+docker build -t myusuariodockerhub/frontend-python:v1.0.0 .
 ```
 
 # Docker Registry - Autenticar a registry
-docker login -u clasesurp2
+docker login -u myusuariodockerhub
 
 # Docker - Tag de imagen existente
-docker tag backend-python:v1.0.0 clasesurp2/backend-python:v1.0.0
+docker tag backend-python:v1.0.0 myusuariodockerhub/backend-python:v1.0.0
 
 # Docker - Subir imagen a registry
 docker push clasesurp2/backend-python:v1.0.0
+docker push clasesurp2/frontend-python:v1.0.0
