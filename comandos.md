@@ -31,7 +31,6 @@ kubectl get deployments -n apps
 # instalar k9s
 ```
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    brew install k9s
     echo >> /home/vscode/.zshrc
     echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/vscode/.zshrc
 ```
